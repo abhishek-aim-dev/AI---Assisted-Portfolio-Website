@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f24"/>
+      <stop offset="50%" stop-color="#0e1738"/>
+      <stop offset="100%" stop-color="#141c47"/>
+    </linearGradient>
+    <linearGradient id="wCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e295d" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0d1433" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="purpleAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="url(#wBg)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <path d="M0 80 H800 M0 160 H800 M0 240 H800 M0 320 H800 M0 400 H800" stroke="#1f2954" stroke-width="0.7" opacity="0.3"/>
+  <path d="M160 0 V480 M320 0 V480 M480 0 V480 M640 0 V480" stroke="#1f2954" stroke-width="0.7" opacity="0.3"/>
+
+  <!-- Browser/Window Header -->
+  <rect x="30" y="24" width="740" height="432" rx="14" fill="#0c122c" stroke="#2a3563" stroke-width="1.2"/>
+  <rect x="30" y="24" width="740" height="42" rx="14" fill="#131c42"/>
+  <circle cx="56" cy="45" r="6" fill="#ef4444"/>
+  <circle cx="76" cy="45" r="6" fill="#f59e0b"/>
+  <circle cx="96" cy="45" r="6" fill="#10b981"/>
+
+  <!-- Search Bar in Header -->
+  <rect x="230" y="32" width="340" height="26" rx="13" fill="#080c1f" stroke="#374170" stroke-width="1"/>
+  <circle cx="248" cy="45" r="4" fill="none" stroke="#818cf8" stroke-width="1.5"/>
+  <line x1="251" y1="48" x2="256" y2="53" stroke="#818cf8" stroke-width="1.5"/>
+  <text x="268" y="49" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Search city (e.g. New Delhi, London)...</text>
+
+  <!-- Main Weather Dashboard -->
+  <!-- Left Main Card: Current Weather -->
+  <rect x="60" y="90" width="370" height="230" rx="16" fill="url(#wCardGrad)" stroke="#3b4b8a" stroke-width="1.2"/>
+  
+  <text x="88" y="128" fill="#e2e8f0" font-family="'Inter', sans-serif" font-size="22" font-weight="700">New Delhi</text>
+  <text x="88" y="148" fill="#a5b4fc" font-family="'Inter', sans-serif" font-size="12">India · Today, 02:30 PM</text>
+
+  <!-- Sun & Cloud Graphic -->
+  <g transform="translate(300, 110)">
+    <circle cx="45" cy="40" r="28" fill="url(#sunGrad)" filter="url(#glow)"/>
+    <path d="M20 58 C15 58 10 52 10 46 C10 40 15 36 21 36 C23 28 30 22 39 22 C49 22 57 29 58 38 C63 38 68 43 68 48 C68 54 63 58 57 58 Z" fill="url(#cloudGrad)" opacity="0.95"/>
+  </g>
+
+  <!-- Temp -->
+  <text x="88" y="222" fill="#ffffff" font-family="'Inter', sans-serif" font-size="54" font-weight="800">28°C</text>
+  <text x="88" y="250" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="14" font-weight="600">Partly Cloudy</text>
+  <text x="88" y="272" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Feels like 30°C · High: 32°C / Low: 22°C</text>
+
+  <!-- Live Weather Metrics (Humidity, Wind, Pressure) -->
+  <rect x="60" y="336" width="112" height="96" rx="12" fill="#131c42" stroke="#283563" stroke-width="1"/>
+  <text x="76" y="362" fill="#818cf8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">💧 Humidity</text>
+  <text x="76" y="396" fill="#ffffff" font-family="'Inter', sans-serif" font-size="22" font-weight="700">58%</text>
+  <text x="76" y="416" fill="#64748b" font-family="'Inter', sans-serif" font-size="10">Normal range</text>
+
+  <rect x="188" y="336" width="112" height="96" rx="12" fill="#131c42" stroke="#283563" stroke-width="1"/>
+  <text x="204" y="362" fill="#818cf8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">💨 Wind</text>
+  <text x="204" y="396" fill="#ffffff" font-family="'Inter', sans-serif" font-size="22" font-weight="700">14 <tspan font-size="12" fill="#94a3b8">km/h</tspan></text>
+  <text x="204" y="416" fill="#64748b" font-family="'Inter', sans-serif" font-size="10">NW Breeze</text>
+
+  <rect x="316" y="336" width="114" height="96" rx="12" fill="#131c42" stroke="#283563" stroke-width="1"/>
+  <text x="332" y="362" fill="#818cf8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">🧭 Pressure</text>
+  <text x="332" y="396" fill="#ffffff" font-family="'Inter', sans-serif" font-size="22" font-weight="700">1013 <tspan font-size="11" fill="#94a3b8">hPa</tspan></text>
+  <text x="332" y="416" fill="#64748b" font-family="'Inter', sans-serif" font-size="10">Steady</text>
+
+  <!-- Right Side: 5-Day Forecast -->
+  <rect x="454" y="90" width="286" height="342" rx="16" fill="url(#wCardGrad)" stroke="#3b4b8a" stroke-width="1.2"/>
+  <text x="478" y="126" fill="#ffffff" font-family="'Inter', sans-serif" font-size="16" font-weight="700">5-Day Forecast</text>
+  <line x1="478" y1="140" x2="716" y2="140" stroke="#2e3c74" stroke-width="1"/>
+
+  <!-- Day 1 -->
+  <text x="478" y="172" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Mon</text>
+  <circle cx="550" cy="168" r="8" fill="url(#sunGrad)"/>
+  <text x="600" y="172" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Sunny</text>
+  <text x="686" y="172" fill="#ffffff" font-family="'Inter', sans-serif" font-size="13" font-weight="700">31° / 20°</text>
+
+  <!-- Day 2 -->
+  <text x="478" y="218" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Tue</text>
+  <path d="M542 222 C538 222 535 218 535 214 C535 210 539 207 544 207 C545 202 550 198 556 198 C562 198 567 202 568 208 C571 208 575 212 575 216 C575 220 571 222 566 222 Z" fill="#60a5fa"/>
+  <text x="600" y="218" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Rain</text>
+  <text x="686" y="218" fill="#ffffff" font-family="'Inter', sans-serif" font-size="13" font-weight="700">26° / 18°</text>
+
+  <!-- Day 3 -->
+  <text x="478" y="264" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Wed</text>
+  <circle cx="550" cy="260" r="8" fill="url(#sunGrad)"/>
+  <text x="600" y="264" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Clear</text>
+  <text x="686" y="264" fill="#ffffff" font-family="'Inter', sans-serif" font-size="13" font-weight="700">29° / 19°</text>
+
+  <!-- Day 4 -->
+  <text x="478" y="310" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Thu</text>
+  <circle cx="546" cy="306" r="7" fill="url(#sunGrad)"/>
+  <path d="M550 312 C548 312 546 310 546 307 C546 304 549 302 552 302 C553 298 557 295 561 295 C565 295 569 298 570 302 C572 302 575 305 575 308 C575 311 572 312 569 312 Z" fill="#93c5fd"/>
+  <text x="600" y="310" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Cloudy</text>
+  <text x="686" y="310" fill="#ffffff" font-family="'Inter', sans-serif" font-size="13" font-weight="700">28° / 21°</text>
+
+  <!-- Day 5 -->
+  <text x="478" y="356" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Fri</text>
+  <circle cx="550" cy="352" r="8" fill="url(#sunGrad)"/>
+  <text x="600" y="356" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Sunny</text>
+  <text x="686" y="356" fill="#ffffff" font-family="'Inter', sans-serif" font-size="13" font-weight="700">30° / 20°</text>
+
+  <!-- Bottom Interactive Tech Badge -->
+  <rect x="478" y="388" width="238" height="28" rx="6" fill="#0b1126" stroke="#4338ca" stroke-width="0.8"/>
+  <text x="597" y="406" fill="#a78bfa" font-family="'Inter', sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">⚡ Dynamic DOM Manipulation · OpenWeather API</text>
+</svg>
